@@ -12,6 +12,9 @@ node {
         bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\msbuild.exe" DebateApp.Client.csproj /t:rebuild'
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe end'
         }
+    }
+    }
+	
 /*		dir('DebateApp/DebateApp.db'){
 		bat '"C:\\Program Files\\dotnet\\dotnet.exe" restore'
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe begin /n:"DebateApp" /k:"dapp"'
