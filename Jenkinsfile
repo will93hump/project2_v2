@@ -12,7 +12,7 @@ node {
         bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\msbuild.exe" DebateApp.Client.csproj /t:rebuild'
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe end'
         }
-		dir('DebateApp/DebateApp.db'){
+/*		dir('DebateApp/DebateApp.db'){
 		bat '"C:\\Program Files\\dotnet\\dotnet.exe" restore'
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe begin /n:"DebateApp" /k:"dapp"'
         bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\msbuild.exe" DebateApp.db.csproj /t:rebuild'
@@ -30,7 +30,8 @@ node {
         bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\msbuild.exe" DebateApp.db.csproj /t:rebuild'
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe end'
 		}
-		slackSend color: 'good' message: 'Code analysis stage complete.'
+*/
+		echo 'Code analysis stage complete.'
 		}
 		catch(Exception e) {slackSend color:'danger' message 'Code analysis stage failed:' + ex}
     }
@@ -51,7 +52,7 @@ node {
     catch(Exception e)
     {
         currentBuild.result = 'FAILURE'
-        slackSend color: 'danger' message: 'Deploy Stage:' + $currentBuild.result
+        echo 'Deploy Stage:' + $currentBuild.result
     }
     
 }
