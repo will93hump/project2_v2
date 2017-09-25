@@ -33,7 +33,7 @@ node {
 */
 		echo 'Code analysis stage complete.'
 		}
-		catch(Exception e) {slackSend color:'danger' message 'Code analysis stage failed:' + ex}
+		catch(Exception e) {echo 'Code analysis stage failed:' + ex}
     }
 
 
@@ -47,7 +47,7 @@ node {
             }      
         }
         currentBuild.result = 'SUCCESS'
-    slackSend color: 'good' message: 'Deploy Stage:' + $currentBuild.result
+    echo 'Deploy Stage:' + $currentBuild.result
     }
     catch(Exception e)
     {
