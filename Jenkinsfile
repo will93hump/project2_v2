@@ -31,12 +31,12 @@ node {
         bat 'C:\\Tools\\SonarQube\\Scanner\\sonar-scanner-msbuild-3.0.2.656\\sonarqube.scanner.msbuild.exe end'
 		}
 
-		echo 'Code analysis stage complete.'  */
+		echo 'Code analysis stage complete.' 
 		}
     catch(Exception e) {echo 'Code analysis stage failed:' + e}
     }
 
-
+ */
 
 
     try{
