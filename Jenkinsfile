@@ -1,5 +1,5 @@
 node {
-    slackSend color: 'good' message: "Started build $currentBuild.number" + "."
+    echo "Started build $currentBuild.number" + "."
     stage('Import'){
     git 'https://github.com/will93hump/project2_v2.git'
     }
