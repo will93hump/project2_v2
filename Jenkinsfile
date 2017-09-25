@@ -33,7 +33,7 @@ node {
 
 		echo 'Code analysis stage complete.'  */
 		}
-    catch(Exception e) {echo 'Code analysis stage failed:' + ex}
+    catch(Exception e) {echo 'Code analysis stage failed:' + e}
     }
 
 
